@@ -4,7 +4,7 @@ import { getEvent, createEvent, updateEvent } from "../controller/event.controll
 import { authController } from "../controller/auth.controller.js";
 import { createExchangeTransaction, getExchangeTransactions, getExchangeTransactionsByUserId } from "../controller/exchange.controller.js";
 import { createReport, getReport } from "../controller/report.controller.js";
-import { getUser, postPointByUserId, changeUserRole } from "../controller/user.controller.js";
+import { getUser, postPointByUserId, changeUserRole, getAllUsers } from "../controller/user.controller.js";
 import { getPaymentHistory, createPaymentMethod } from "../controller/payment.controller.js";
 import { getTransactionHistory, createTransactionPayment } from "../controller/transaction.controller.js";
 import { getItems, createItem, updateItem } from "../controller/item.controller.js";
@@ -34,6 +34,7 @@ router.put("/items/:id", tokenValidation(), updateItem);
 router.get("/user", tokenValidation(), getUser);
 router.post("/user/points", tokenValidation(), postPointByUserId);
 router.post("/user/change-role", tokenValidation(), changeUserRole);
+router.get("/users", tokenValidation(), getAllUsers);
 
 router.get("/payment-history/:user_id", tokenValidation(), getPaymentHistory);
 router.get("/transaction-history/:user_id", tokenValidation(), getTransactionHistory);

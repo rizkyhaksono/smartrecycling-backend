@@ -20,28 +20,29 @@ Test the API using [`POSTMAN`](https://www.postman.com/) or any other API testin
 
 ## Table of Endpoints
 
-| No. | Endpoints              | Method |
-| --- | ---------------------- | ------ |
-| 1   | /api/signup            | POST   |
-| 2   | /api/signin            | POST   |
-| 3   | /api/user              | GET    |
-| 4   | /api/events            | GET    |
-| 5   | /api/events            | POST   |
-| 6   | /api/reports           | GET    |
-| 7   | /api/reports           | POST   |
-| 8   | /api/exchange          | GET    |
-| 9   | /api/exchange/:user_id | GET    |
-| 10  | /api/exchange          | POST   |
-| 11  | /api/exchange          | POST   |
-| 12  | /api/exchange          | POST   |
-| 13  | /api/exchange          | POST   |
-| 14  | /api/exchange          | POST   |
-| 15  | /api/exchange          | POST   |
-| 16  | /api/exchange          | POST   |
-| 17  | /api/exchange          | POST   |
-| 18  | /api/exchange          | POST   |
-| 19  | /api/exchange          | POST   |
-| 20  | /api/exchange          | POST   |
+| No. | Endpoints                         | Method |
+| --- | --------------------------------- | ------ |
+| 1   | /api/signup                       | POST   |
+| 2   | /api/signin                       | POST   |
+| 3   | /api/user                         | GET    |
+| 4   | /api/users [admin]                | GET    |
+| 5   | /api/user/points                  | POST   |
+| 6   | /api/user/change-role             | GET    |
+| 7   | /api/reports                      | GET    |
+| 8   | /api/reports                      | POST   |
+| 9   | /api/events                       | GET    |
+| 10  | /api/events                       | POST   |
+| 11  | /api/events/:id                   | PUT    |
+| 12  | /api/exchange                     | POST   |
+| 12  | /api/exchange                     | POST   |
+| 13  | /api/exchange/:user_id            | POST   |
+| 14  | /api/payment-history/:user_id     | GET    |
+| 15  | /api/transaction-history/:user_id | GET    |
+| 16  | /api/payment-method               | POST   |
+| 17  | /api/transaction-payment          | POST   |
+| 18  | /api/items                        | GET    |
+| 19  | /api/items                        | POST   |
+| 20  | /api/items/:id                    | PUT    |
 
 ### Sign Up
 

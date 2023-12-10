@@ -37,6 +37,40 @@ export const getUser = async (req, res, next) => {
   }
 };
 
+export const getAllUsers = async (req, res, next) => {
+  try {
+    // Check if the request is authorized with a valid admin token
+    if (!req.headers.authorization || !req.headers.authorization.startsWith("Bearer ")) {
+      return res.status(401).json({
+        status: 401,
+        message: "Unauthorized: Bearer token required",
+      });
+    }
+
+    // Verify the token and ensure the user has an admin role
+    const data = verifyToken(req.headers.access_token);
+    const [adminUser] = await dbPool.query("SELECT * FROM User WHERE id = ? AND role = 'ADMIN'", [data.id]);
+
+    if (!adminUser || adminUser.length === 0) {
+      return res.status(403).json({
+        status: 403,
+        message: "Forbidden: Admin access required",
+      });
+    }
+
+    // Fetch all users
+    const [usersRows] = await dbPool.query("SELECT * FROM User");
+    const users = usersRows;
+
+    res.json({
+      status: 200,
+      data: users,
+    });
+  } catch (error) {
+    next(error);
+  }
+};
+
 export const postPointByUserId = async (req, res, next) => {
   try {
     const { uuid, points } = req.body;
