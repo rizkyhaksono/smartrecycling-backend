@@ -16,7 +16,7 @@ app.use(express.urlencoded({ extended: true }));
 app.use(cors(corsOptions));
 
 app.get("/", function (req, res) {
-  res.send("Hello");
+  res.send("Go to /api/{endpoint}");
 });
 
 app.use("/api", routes);
