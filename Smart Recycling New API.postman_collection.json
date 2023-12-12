@@ -6,32 +6,31 @@
 	},
 	"item": [
 		{
-			"name": "http://localhost:3000",
+			"name": "Test Health",
 			"request": {
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "http://localhost:3000/",
-					"protocol": "http",
+					"raw": "https://api.smart-recycling.my.id",
+					"protocol": "https",
 					"host": [
-						"localhost"
-					],
-					"port": "3000",
-					"path": [
-						""
+						"api",
+						"smart-recycling",
+						"my",
+						"id"
 					]
 				}
 			},
 			"response": []
 		},
 		{
-			"name": "http://localhost:3000/signup",
+			"name": "Sign Up Account",
 			"request": {
 				"method": "POST",
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n    \"name\": \"test123\",\r\n    \"email\": \"test123@gmail.com\",\r\n    \"password\": \"test123\"\r\n}",
+					"raw": "{\r\n    \"name\": \"testadmin\",\r\n    \"email\": \"testadmin@gmail.com\",\r\n    \"password\": \"testadmin123\"\r\n}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -39,12 +38,14 @@
 					}
 				},
 				"url": {
-					"raw": "http://localhost:3000/api/signup",
-					"protocol": "http",
+					"raw": "https://api.smart-recycling.my.id/api/signup",
+					"protocol": "https",
 					"host": [
-						"localhost"
+						"api",
+						"smart-recycling",
+						"my",
+						"id"
 					],
-					"port": "3000",
 					"path": [
 						"api",
 						"signup"
@@ -54,13 +55,13 @@
 			"response": []
 		},
 		{
-			"name": "http://localhost:3000/signin",
+			"name": "Sign In Account",
 			"request": {
 				"method": "POST",
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n    \"email\": \"test123@gmail.com\",\r\n    \"password\": \"test123\"\r\n}",
+					"raw": "{\r\n    \"email\": \"testadmin@gmail.com\",\r\n    \"password\": \"testadmin123\"\r\n}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -68,12 +69,14 @@
 					}
 				},
 				"url": {
-					"raw": "http://localhost:3000/api/signin",
-					"protocol": "http",
+					"raw": "https://api.smart-recycling.my.id/api/signin",
+					"protocol": "https",
 					"host": [
-						"localhost"
+						"api",
+						"smart-recycling",
+						"my",
+						"id"
 					],
-					"port": "3000",
 					"path": [
 						"api",
 						"signin"
@@ -83,14 +86,14 @@
 			"response": []
 		},
 		{
-			"name": "http://localhost:3000/api/user",
+			"name": "Data User",
 			"request": {
 				"auth": {
 					"type": "bearer",
 					"bearer": [
 						{
 							"key": "token",
-							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjJiYzQ4NmE2LWRjNWEtNDYwOC1hM2FkLTg0NTc1ZTBkYTQ5NyIsImlhdCI6MTcwMjIyMTI1OSwiZXhwIjoxNzAyMjMyMDU5fQ.AuUJKkgOh8XusM8pArMxqXyTL4vBeVELk5yDtZ0mxS4",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6Ijc4NGNiOTcyLTczNGQtNDQ2MS05ZDE1LTM0ZGRhYzhjNGE2ZCIsImlhdCI6MTcwMjMwMTIxNCwiZXhwIjoxNzAyMzEyMDE0fQ.n5-n0bUryhuT8d7GBOVsjxQrsCF1ckZoNTKQcxpSKck",
 							"type": "string"
 						}
 					]
@@ -98,12 +101,14 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "http://localhost:3000/api/user",
-					"protocol": "http",
+					"raw": "https://api.smart-recycling.my.id/api/user",
+					"protocol": "https",
 					"host": [
-						"localhost"
+						"api",
+						"smart-recycling",
+						"my",
+						"id"
 					],
-					"port": "3000",
 					"path": [
 						"api",
 						"user"
@@ -113,14 +118,14 @@
 			"response": []
 		},
 		{
-			"name": "http://localhost:3000/api/user/points",
+			"name": "Input Points",
 			"request": {
 				"auth": {
 					"type": "bearer",
 					"bearer": [
 						{
 							"key": "token",
-							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjJiYzQ4NmE2LWRjNWEtNDYwOC1hM2FkLTg0NTc1ZTBkYTQ5NyIsImlhdCI6MTcwMjIyMTI1OSwiZXhwIjoxNzAyMjMyMDU5fQ.AuUJKkgOh8XusM8pArMxqXyTL4vBeVELk5yDtZ0mxS4",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjgxZjAyNDg2LWJkODEtNGRlZS1iOTBiLWNkYjk0ZDIzZjFiZiIsImlhdCI6MTcwMjMwMDg4MywiZXhwIjoxNzAyMzExNjgzfQ.TOeIBY8YaDmXjnqw9BDAhxMSwuIBNWnzl42bYDm47EU",
 							"type": "string"
 						}
 					]
@@ -129,7 +134,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n    \"uuid\": \"2bc486a6-dc5a-4608-a3ad-84575e0da497\",\r\n    \"points\": 500\r\n}",
+					"raw": "{\r\n    \"uuid\": \"81f02486-bd81-4dee-b90b-cdb94d23f1bf\",\r\n    \"points\": 1000\r\n}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -137,12 +142,14 @@
 					}
 				},
 				"url": {
-					"raw": "http://localhost:3000/api/user/points",
-					"protocol": "http",
+					"raw": "https://api.smart-recycling.my.id/api/user/points",
+					"protocol": "https",
 					"host": [
-						"localhost"
+						"api",
+						"smart-recycling",
+						"my",
+						"id"
 					],
-					"port": "3000",
 					"path": [
 						"api",
 						"user",
@@ -153,14 +160,14 @@
 			"response": []
 		},
 		{
-			"name": "http://localhost:3000/api/user/change-role",
+			"name": "Input Role",
 			"request": {
 				"auth": {
 					"type": "bearer",
 					"bearer": [
 						{
 							"key": "token",
-							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjJiYzQ4NmE2LWRjNWEtNDYwOC1hM2FkLTg0NTc1ZTBkYTQ5NyIsImlhdCI6MTcwMjIyMTI1OSwiZXhwIjoxNzAyMjMyMDU5fQ.AuUJKkgOh8XusM8pArMxqXyTL4vBeVELk5yDtZ0mxS4",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjgxZjAyNDg2LWJkODEtNGRlZS1iOTBiLWNkYjk0ZDIzZjFiZiIsImlhdCI6MTcwMjMwMDg4MywiZXhwIjoxNzAyMzExNjgzfQ.TOeIBY8YaDmXjnqw9BDAhxMSwuIBNWnzl42bYDm47EU",
 							"type": "string"
 						}
 					]
@@ -169,7 +176,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n    \"uuid\": \"f2da6afa-2d64-4138-ba28-3884339a6ff8\",\r\n    \"newRole\": \"PENGEPUL\"\r\n}",
+					"raw": "{\r\n    \"uuid\": \"784cb972-734d-4461-9d15-34ddac8c4a6d\",\r\n    \"newRole\": \"ADMIN\"\r\n}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -177,12 +184,14 @@
 					}
 				},
 				"url": {
-					"raw": "http://localhost:3000/api/user/change-role",
-					"protocol": "http",
+					"raw": "https://api.smart-recycling.my.id/api/user/change-role",
+					"protocol": "https",
 					"host": [
-						"localhost"
+						"api",
+						"smart-recycling",
+						"my",
+						"id"
 					],
-					"port": "3000",
 					"path": [
 						"api",
 						"user",
@@ -193,14 +202,14 @@
 			"response": []
 		},
 		{
-			"name": "http://localhost:3000/api/users",
+			"name": "All Data Users",
 			"request": {
 				"auth": {
 					"type": "bearer",
 					"bearer": [
 						{
 							"key": "token",
-							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjJiYzQ4NmE2LWRjNWEtNDYwOC1hM2FkLTg0NTc1ZTBkYTQ5NyIsImlhdCI6MTcwMjIyMTI1OSwiZXhwIjoxNzAyMjMyMDU5fQ.AuUJKkgOh8XusM8pArMxqXyTL4vBeVELk5yDtZ0mxS4",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6Ijc4NGNiOTcyLTczNGQtNDQ2MS05ZDE1LTM0ZGRhYzhjNGE2ZCIsImlhdCI6MTcwMjMwMTIxNCwiZXhwIjoxNzAyMzEyMDE0fQ.n5-n0bUryhuT8d7GBOVsjxQrsCF1ckZoNTKQcxpSKck",
 							"type": "string"
 						}
 					]
@@ -208,12 +217,14 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "http://localhost:3000/api/users",
-					"protocol": "http",
+					"raw": "https://api.smart-recycling.my.id/api/users",
+					"protocol": "https",
 					"host": [
-						"localhost"
+						"api",
+						"smart-recycling",
+						"my",
+						"id"
 					],
-					"port": "3000",
 					"path": [
 						"api",
 						"users"
@@ -223,14 +234,14 @@
 			"response": []
 		},
 		{
-			"name": "http://localhost:3000/api/events",
+			"name": "Get All Data Events",
 			"request": {
 				"auth": {
 					"type": "bearer",
 					"bearer": [
 						{
 							"key": "token",
-							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjJiYzQ4NmE2LWRjNWEtNDYwOC1hM2FkLTg0NTc1ZTBkYTQ5NyIsImlhdCI6MTcwMjIyMTI1OSwiZXhwIjoxNzAyMjMyMDU5fQ.AuUJKkgOh8XusM8pArMxqXyTL4vBeVELk5yDtZ0mxS4",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6Ijc4NGNiOTcyLTczNGQtNDQ2MS05ZDE1LTM0ZGRhYzhjNGE2ZCIsImlhdCI6MTcwMjMwMTIxNCwiZXhwIjoxNzAyMzEyMDE0fQ.n5-n0bUryhuT8d7GBOVsjxQrsCF1ckZoNTKQcxpSKck",
 							"type": "string"
 						}
 					]
@@ -238,12 +249,14 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "http://localhost:3000/api/events",
-					"protocol": "http",
+					"raw": "https://api.smart-recycling.my.id/api/events",
+					"protocol": "https",
 					"host": [
-						"localhost"
+						"api",
+						"smart-recycling",
+						"my",
+						"id"
 					],
-					"port": "3000",
 					"path": [
 						"api",
 						"events"
@@ -253,14 +266,14 @@
 			"response": []
 		},
 		{
-			"name": "http://localhost:3000/api/events",
+			"name": "Input Data Event",
 			"request": {
 				"auth": {
 					"type": "bearer",
 					"bearer": [
 						{
 							"key": "token",
-							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjJiYzQ4NmE2LWRjNWEtNDYwOC1hM2FkLTg0NTc1ZTBkYTQ5NyIsImlhdCI6MTcwMjIyMTI1OSwiZXhwIjoxNzAyMjMyMDU5fQ.AuUJKkgOh8XusM8pArMxqXyTL4vBeVELk5yDtZ0mxS4",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6Ijc4NGNiOTcyLTczNGQtNDQ2MS05ZDE1LTM0ZGRhYzhjNGE2ZCIsImlhdCI6MTcwMjMwMTIxNCwiZXhwIjoxNzAyMzEyMDE0fQ.n5-n0bUryhuT8d7GBOVsjxQrsCF1ckZoNTKQcxpSKck",
 							"type": "string"
 						}
 					]
@@ -269,7 +282,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n    \"title\": \"Test title\",\r\n    \"description\": \"Test description\",\r\n    \"path_image\": \"Test path_image\",\r\n    \"user_id\": \"2bc486a6-dc5a-4608-a3ad-84575e0da497\"\r\n}",
+					"raw": "{\r\n    \"title\": \"Test title\",\r\n    \"description\": \"Test description\",\r\n    \"path_image\": \"Test path_image\",\r\n    \"user_id\": \"784cb972-734d-4461-9d15-34ddac8c4a6d\"\r\n}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -277,12 +290,14 @@
 					}
 				},
 				"url": {
-					"raw": "http://localhost:3000/api/events",
-					"protocol": "http",
+					"raw": "https://api.smart-recycling.my.id/api/events",
+					"protocol": "https",
 					"host": [
-						"localhost"
+						"api",
+						"smart-recycling",
+						"my",
+						"id"
 					],
-					"port": "3000",
 					"path": [
 						"api",
 						"events"
@@ -292,14 +307,14 @@
 			"response": []
 		},
 		{
-			"name": "http://localhost:3000/api/report",
+			"name": "Get All Data Reports",
 			"request": {
 				"auth": {
 					"type": "bearer",
 					"bearer": [
 						{
 							"key": "token",
-							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjJiYzQ4NmE2LWRjNWEtNDYwOC1hM2FkLTg0NTc1ZTBkYTQ5NyIsImlhdCI6MTcwMjIyMTI1OSwiZXhwIjoxNzAyMjMyMDU5fQ.AuUJKkgOh8XusM8pArMxqXyTL4vBeVELk5yDtZ0mxS4",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6Ijc4NGNiOTcyLTczNGQtNDQ2MS05ZDE1LTM0ZGRhYzhjNGE2ZCIsImlhdCI6MTcwMjMwMTIxNCwiZXhwIjoxNzAyMzEyMDE0fQ.n5-n0bUryhuT8d7GBOVsjxQrsCF1ckZoNTKQcxpSKck",
 							"type": "string"
 						}
 					]
@@ -307,12 +322,14 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "http://localhost:3000/api/report",
-					"protocol": "http",
+					"raw": "https://api.smart-recycling.my.id/api/report",
+					"protocol": "https",
 					"host": [
-						"localhost"
+						"api",
+						"smart-recycling",
+						"my",
+						"id"
 					],
-					"port": "3000",
 					"path": [
 						"api",
 						"report"
@@ -322,14 +339,14 @@
 			"response": []
 		},
 		{
-			"name": "http://localhost:3000/api/report",
+			"name": "Input Data Report",
 			"request": {
 				"auth": {
 					"type": "bearer",
 					"bearer": [
 						{
 							"key": "token",
-							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjJiYzQ4NmE2LWRjNWEtNDYwOC1hM2FkLTg0NTc1ZTBkYTQ5NyIsImlhdCI6MTcwMjIyMTI1OSwiZXhwIjoxNzAyMjMyMDU5fQ.AuUJKkgOh8XusM8pArMxqXyTL4vBeVELk5yDtZ0mxS4",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6Ijc4NGNiOTcyLTczNGQtNDQ2MS05ZDE1LTM0ZGRhYzhjNGE2ZCIsImlhdCI6MTcwMjMwMTIxNCwiZXhwIjoxNzAyMzEyMDE0fQ.n5-n0bUryhuT8d7GBOVsjxQrsCF1ckZoNTKQcxpSKck",
 							"type": "string"
 						}
 					]
@@ -338,7 +355,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n    \"email\": \"hadeh@gmail.com\",\r\n    \"subject\": \"banyak sampah\",\r\n    \"location\": \"malang\",\r\n    \"user_id\": \"f2da6afa-2d64-4138-ba28-3884339a6ff8\"\r\n}",
+					"raw": "{\r\n    \"email\": \"hadeh@gmail.com\",\r\n    \"subject\": \"banyak sampah\",\r\n    \"location\": \"malang\",\r\n    \"user_id\": \"784cb972-734d-4461-9d15-34ddac8c4a6d\"\r\n}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -346,12 +363,14 @@
 					}
 				},
 				"url": {
-					"raw": "http://localhost:3000/api/report",
-					"protocol": "http",
+					"raw": "https://api.smart-recycling.my.id/api/report",
+					"protocol": "https",
 					"host": [
-						"localhost"
+						"api",
+						"smart-recycling",
+						"my",
+						"id"
 					],
-					"port": "3000",
 					"path": [
 						"api",
 						"report"
@@ -361,14 +380,14 @@
 			"response": []
 		},
 		{
-			"name": "http://localhost:3000/api/exchange",
+			"name": "Get All Data Exchange",
 			"request": {
 				"auth": {
 					"type": "bearer",
 					"bearer": [
 						{
 							"key": "token",
-							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjJiYzQ4NmE2LWRjNWEtNDYwOC1hM2FkLTg0NTc1ZTBkYTQ5NyIsImlhdCI6MTcwMjIyMTI1OSwiZXhwIjoxNzAyMjMyMDU5fQ.AuUJKkgOh8XusM8pArMxqXyTL4vBeVELk5yDtZ0mxS4",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6Ijc4NGNiOTcyLTczNGQtNDQ2MS05ZDE1LTM0ZGRhYzhjNGE2ZCIsImlhdCI6MTcwMjMwMTIxNCwiZXhwIjoxNzAyMzEyMDE0fQ.n5-n0bUryhuT8d7GBOVsjxQrsCF1ckZoNTKQcxpSKck",
 							"type": "string"
 						}
 					]
@@ -376,12 +395,14 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "http://localhost:3000/api/exchange",
-					"protocol": "http",
+					"raw": "https://api.smart-recycling.my.id/api/exchange",
+					"protocol": "https",
 					"host": [
-						"localhost"
+						"api",
+						"smart-recycling",
+						"my",
+						"id"
 					],
-					"port": "3000",
 					"path": [
 						"api",
 						"exchange"
@@ -391,14 +412,14 @@
 			"response": []
 		},
 		{
-			"name": "http://localhost:3000/api/exchange",
+			"name": "Input Exchange",
 			"request": {
 				"auth": {
 					"type": "bearer",
 					"bearer": [
 						{
 							"key": "token",
-							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjJiYzQ4NmE2LWRjNWEtNDYwOC1hM2FkLTg0NTc1ZTBkYTQ5NyIsImlhdCI6MTcwMjIyMTI1OSwiZXhwIjoxNzAyMjMyMDU5fQ.AuUJKkgOh8XusM8pArMxqXyTL4vBeVELk5yDtZ0mxS4",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6Ijc4NGNiOTcyLTczNGQtNDQ2MS05ZDE1LTM0ZGRhYzhjNGE2ZCIsImlhdCI6MTcwMjMwMTIxNCwiZXhwIjoxNzAyMzEyMDE0fQ.n5-n0bUryhuT8d7GBOVsjxQrsCF1ckZoNTKQcxpSKck",
 							"type": "string"
 						}
 					]
@@ -407,7 +428,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n    \"items_id\": 1,\r\n    \"user_id\": \"f2da6afa-2d64-4138-ba28-3884339a6ff8\"\r\n}",
+					"raw": "{\r\n    \"items_id\": 1,\r\n    \"user_id\": \"784cb972-734d-4461-9d15-34ddac8c4a6d\"\r\n}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -415,12 +436,14 @@
 					}
 				},
 				"url": {
-					"raw": "http://localhost:3000/api/exchange",
-					"protocol": "http",
+					"raw": "https://api.smart-recycling.my.id/api/exchange",
+					"protocol": "https",
 					"host": [
-						"localhost"
+						"api",
+						"smart-recycling",
+						"my",
+						"id"
 					],
-					"port": "3000",
 					"path": [
 						"api",
 						"exchange"
@@ -430,35 +453,37 @@
 			"response": []
 		},
 		{
-			"name": "http://localhost:3000/api/exchange/f2da6afa-2d64-4138-ba28-3884339a6ff8",
+			"name": "Get Data by User Id",
 			"request": {
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "http://localhost:3000/api/exchange/f2da6afa-2d64-4138-ba28-3884339a6ff8",
-					"protocol": "http",
+					"raw": "https://api.smart-recycling.my.id/api/exchange/784cb972-734d-4461-9d15-34ddac8c4a6d",
+					"protocol": "https",
 					"host": [
-						"localhost"
+						"api",
+						"smart-recycling",
+						"my",
+						"id"
 					],
-					"port": "3000",
 					"path": [
 						"api",
 						"exchange",
-						"f2da6afa-2d64-4138-ba28-3884339a6ff8"
+						"784cb972-734d-4461-9d15-34ddac8c4a6d"
 					]
 				}
 			},
 			"response": []
 		},
 		{
-			"name": "http://localhost:3000/api/items",
+			"name": "Get All Data Items",
 			"request": {
 				"auth": {
 					"type": "bearer",
 					"bearer": [
 						{
 							"key": "token",
-							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjJiYzQ4NmE2LWRjNWEtNDYwOC1hM2FkLTg0NTc1ZTBkYTQ5NyIsImlhdCI6MTcwMjIyMTI1OSwiZXhwIjoxNzAyMjMyMDU5fQ.AuUJKkgOh8XusM8pArMxqXyTL4vBeVELk5yDtZ0mxS4",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6Ijc4NGNiOTcyLTczNGQtNDQ2MS05ZDE1LTM0ZGRhYzhjNGE2ZCIsImlhdCI6MTcwMjMwMTIxNCwiZXhwIjoxNzAyMzEyMDE0fQ.n5-n0bUryhuT8d7GBOVsjxQrsCF1ckZoNTKQcxpSKck",
 							"type": "string"
 						}
 					]
@@ -466,12 +491,14 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "http://localhost:3000/api/items",
-					"protocol": "http",
+					"raw": "https://api.smart-recycling.my.id/api/items",
+					"protocol": "https",
 					"host": [
-						"localhost"
+						"api",
+						"smart-recycling",
+						"my",
+						"id"
 					],
-					"port": "3000",
 					"path": [
 						"api",
 						"items"
@@ -481,14 +508,14 @@
 			"response": []
 		},
 		{
-			"name": "http://localhost:3000/api/items",
+			"name": "Input Data Item",
 			"request": {
 				"auth": {
 					"type": "bearer",
 					"bearer": [
 						{
 							"key": "token",
-							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjJiYzQ4NmE2LWRjNWEtNDYwOC1hM2FkLTg0NTc1ZTBkYTQ5NyIsImlhdCI6MTcwMjIyMTI1OSwiZXhwIjoxNzAyMjMyMDU5fQ.AuUJKkgOh8XusM8pArMxqXyTL4vBeVELk5yDtZ0mxS4",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6Ijc4NGNiOTcyLTczNGQtNDQ2MS05ZDE1LTM0ZGRhYzhjNGE2ZCIsImlhdCI6MTcwMjMwMTIxNCwiZXhwIjoxNzAyMzEyMDE0fQ.n5-n0bUryhuT8d7GBOVsjxQrsCF1ckZoNTKQcxpSKck",
 							"type": "string"
 						}
 					]
@@ -497,7 +524,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n    \"name\": \"Alat Makan\",\r\n    \"points\": 3000,\r\n    \"total\": 32\r\n}",
+					"raw": "{\r\n    \"name\": \"Cutlery\",\r\n    \"points\": 7000,\r\n    \"total\": 21\r\n}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -505,12 +532,14 @@
 					}
 				},
 				"url": {
-					"raw": "http://localhost:3000/api/items",
-					"protocol": "http",
+					"raw": "https://api.smart-recycling.my.id/api/items",
+					"protocol": "https",
 					"host": [
-						"localhost"
+						"api",
+						"smart-recycling",
+						"my",
+						"id"
 					],
-					"port": "3000",
 					"path": [
 						"api",
 						"items"
@@ -520,14 +549,14 @@
 			"response": []
 		},
 		{
-			"name": "http://localhost:3000/api/items/5",
+			"name": "Update Data Item",
 			"request": {
 				"auth": {
 					"type": "bearer",
 					"bearer": [
 						{
 							"key": "token",
-							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjJiYzQ4NmE2LWRjNWEtNDYwOC1hM2FkLTg0NTc1ZTBkYTQ5NyIsImlhdCI6MTcwMjIyMTI1OSwiZXhwIjoxNzAyMjMyMDU5fQ.AuUJKkgOh8XusM8pArMxqXyTL4vBeVELk5yDtZ0mxS4",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6Ijc4NGNiOTcyLTczNGQtNDQ2MS05ZDE1LTM0ZGRhYzhjNGE2ZCIsImlhdCI6MTcwMjMwMTIxNCwiZXhwIjoxNzAyMzEyMDE0fQ.n5-n0bUryhuT8d7GBOVsjxQrsCF1ckZoNTKQcxpSKck",
 							"type": "string"
 						}
 					]
@@ -536,7 +565,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n    \"name\": \"Alat Makan\",\r\n    \"points\": 4000,\r\n    \"total\": 20\r\n}",
+					"raw": "{\r\n    \"name\": \"T-Shirt\",\r\n    \"points\": 5000,\r\n    \"total\": 32\r\n}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -544,30 +573,32 @@
 					}
 				},
 				"url": {
-					"raw": "http://localhost:3000/api/items/5",
-					"protocol": "http",
+					"raw": "https://api.smart-recycling.my.id/api/items/0",
+					"protocol": "https",
 					"host": [
-						"localhost"
+						"api",
+						"smart-recycling",
+						"my",
+						"id"
 					],
-					"port": "3000",
 					"path": [
 						"api",
 						"items",
-						"5"
+						"0"
 					]
 				}
 			},
 			"response": []
 		},
 		{
-			"name": "http://localhost:3000/api/payment-history/f2da6afa-2d64-4138-ba28-3884339a6ff8",
+			"name": "Get Payment History by User Id",
 			"request": {
 				"auth": {
 					"type": "bearer",
 					"bearer": [
 						{
 							"key": "token",
-							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjJiYzQ4NmE2LWRjNWEtNDYwOC1hM2FkLTg0NTc1ZTBkYTQ5NyIsImlhdCI6MTcwMjIyMTI1OSwiZXhwIjoxNzAyMjMyMDU5fQ.AuUJKkgOh8XusM8pArMxqXyTL4vBeVELk5yDtZ0mxS4",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6Ijc4NGNiOTcyLTczNGQtNDQ2MS05ZDE1LTM0ZGRhYzhjNGE2ZCIsImlhdCI6MTcwMjMwMTIxNCwiZXhwIjoxNzAyMzEyMDE0fQ.n5-n0bUryhuT8d7GBOVsjxQrsCF1ckZoNTKQcxpSKck",
 							"type": "string"
 						}
 					]
@@ -575,51 +606,55 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "http://localhost:3000/api/payment-history/f2da6afa-2d64-4138-ba28-3884339a6ff8",
-					"protocol": "http",
+					"raw": "https://api.smart-recycling.my.id/api/payment-history/784cb972-734d-4461-9d15-34ddac8c4a6d",
+					"protocol": "https",
 					"host": [
-						"localhost"
+						"api",
+						"smart-recycling",
+						"my",
+						"id"
 					],
-					"port": "3000",
 					"path": [
 						"api",
 						"payment-history",
-						"f2da6afa-2d64-4138-ba28-3884339a6ff8"
+						"784cb972-734d-4461-9d15-34ddac8c4a6d"
 					]
 				}
 			},
 			"response": []
 		},
 		{
-			"name": "http://localhost:3000/api/transaction-history/f2da6afa-2d64-4138-ba28-3884339a6ff8",
+			"name": "Get Transaction by User Id",
 			"request": {
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "http://localhost:3000/api/transaction-history/f2da6afa-2d64-4138-ba28-3884339a6ff8",
-					"protocol": "http",
+					"raw": "https://api.smart-recycling.my.id/api/transaction-history/784cb972-734d-4461-9d15-34ddac8c4a6d",
+					"protocol": "https",
 					"host": [
-						"localhost"
+						"api",
+						"smart-recycling",
+						"my",
+						"id"
 					],
-					"port": "3000",
 					"path": [
 						"api",
 						"transaction-history",
-						"f2da6afa-2d64-4138-ba28-3884339a6ff8"
+						"784cb972-734d-4461-9d15-34ddac8c4a6d"
 					]
 				}
 			},
 			"response": []
 		},
 		{
-			"name": "http://localhost:3000/api/payment-method",
+			"name": "Input Payment Method",
 			"request": {
 				"auth": {
 					"type": "bearer",
 					"bearer": [
 						{
 							"key": "token",
-							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjJiYzQ4NmE2LWRjNWEtNDYwOC1hM2FkLTg0NTc1ZTBkYTQ5NyIsImlhdCI6MTcwMjIyMTI1OSwiZXhwIjoxNzAyMjMyMDU5fQ.AuUJKkgOh8XusM8pArMxqXyTL4vBeVELk5yDtZ0mxS4",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6Ijc4NGNiOTcyLTczNGQtNDQ2MS05ZDE1LTM0ZGRhYzhjNGE2ZCIsImlhdCI6MTcwMjMwMTIxNCwiZXhwIjoxNzAyMzEyMDE0fQ.n5-n0bUryhuT8d7GBOVsjxQrsCF1ckZoNTKQcxpSKck",
 							"type": "string"
 						}
 					]
@@ -628,7 +663,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n    \"user_id\": \"f2da6afa-2d64-4138-ba28-3884339a6ff8\",\r\n    \"method_type\": \"QRIS\",\r\n    \"card_number\": \"\",\r\n    \"expiration_date\": \"2023-12-31\",\r\n    \"cvv\": \"\"\r\n}",
+					"raw": "{\r\n    \"user_id\": \"784cb972-734d-4461-9d15-34ddac8c4a6d\",\r\n    \"method_type\": \"QRIS\",\r\n    \"card_number\": \"123\",\r\n    \"expiration_date\": \"2023-12-12\",\r\n    \"cvv\": \"123\"\r\n}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -636,12 +671,14 @@
 					}
 				},
 				"url": {
-					"raw": "http://localhost:3000/api/payment-method",
-					"protocol": "http",
+					"raw": "https://api.smart-recycling.my.id/api/payment-method",
+					"protocol": "https",
 					"host": [
-						"localhost"
+						"api",
+						"smart-recycling",
+						"my",
+						"id"
 					],
-					"port": "3000",
 					"path": [
 						"api",
 						"payment-method"
@@ -651,14 +688,14 @@
 			"response": []
 		},
 		{
-			"name": "http://localhost:3000/api/transaction-payment",
+			"name": "Input Transaction Payment",
 			"request": {
 				"auth": {
 					"type": "bearer",
 					"bearer": [
 						{
 							"key": "token",
-							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjJiYzQ4NmE2LWRjNWEtNDYwOC1hM2FkLTg0NTc1ZTBkYTQ5NyIsImlhdCI6MTcwMjIyMTI1OSwiZXhwIjoxNzAyMjMyMDU5fQ.AuUJKkgOh8XusM8pArMxqXyTL4vBeVELk5yDtZ0mxS4",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6Ijc4NGNiOTcyLTczNGQtNDQ2MS05ZDE1LTM0ZGRhYzhjNGE2ZCIsImlhdCI6MTcwMjMwMTIxNCwiZXhwIjoxNzAyMzEyMDE0fQ.n5-n0bUryhuT8d7GBOVsjxQrsCF1ckZoNTKQcxpSKck",
 							"type": "string"
 						}
 					]
@@ -675,12 +712,14 @@
 					}
 				},
 				"url": {
-					"raw": "http://localhost:3000/api/transaction-payment",
-					"protocol": "http",
+					"raw": "https://api.smart-recycling.my.id/api/transaction-payment",
+					"protocol": "https",
 					"host": [
-						"localhost"
+						"api",
+						"smart-recycling",
+						"my",
+						"id"
 					],
-					"port": "3000",
 					"path": [
 						"api",
 						"transaction-payment"
