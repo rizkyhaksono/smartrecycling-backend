@@ -2,6 +2,8 @@
 
 Smart Recycling API is built using Express.js and MySQL. Below is the documentation for the available endpoints.
 
+[Full documentation right here](https://documenter.getpostman.com/view/18031605/2s9Ykn82CC)
+
 ## Installation
 
 > Install the required dependencies:
