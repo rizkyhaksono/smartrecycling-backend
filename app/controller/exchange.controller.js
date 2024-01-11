@@ -1,20 +1,6 @@
 import dbPool from "../lib/dbConnect.js";
 import { verifyToken } from "../lib/tokenHandler.js";
 
-// export const getExchangeTransactions = async (req, res, next) => {
-//   try {
-//     const [exchangeTransactionRows] = await dbPool.query("SELECT * FROM ExchangeTransaction");
-//     const exchangeTransactions = exchangeTransactionRows;
-
-//     res.json({
-//       status: 200,
-//       data: exchangeTransactions,
-//     });
-//   } catch (error) {
-//     next(error);
-//   }
-// };
-
 export const getExchangeTransactions = async (req, res, next) => {
   try {
     if (!req.headers.authorization || !req.headers.authorization.startsWith("Bearer ")) {
