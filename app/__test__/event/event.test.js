@@ -1,5 +1,6 @@
 import supertest from "supertest";
 import server from "../../lib/testServer";
+import { token } from "../db";
 
 const app = server();
 
@@ -17,11 +18,7 @@ describe("Event Controller", () => {
         user_id: user.id,
       };
 
-      const response = await supertest(app)
-        .post("/api/events")
-        .set("Authorization", `eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6Ijc4NGNiOTcyLTczNGQtNDQ2MS05ZDE1LTM0ZGRhYzhjNGE2ZCIsImlhdCI6MTcwNDk3MTE1MSwiZXhwIjoxNzA0OTgxOTUxfQ.8skb-xF4cZutqJHzrjNx0DYCnFs7qeUZ-XaZBqxZO8c`)
-        .send(newEvent)
-        .expect(201);
+      const response = await supertest(app).post("/api/events").set("Authorization", `${token}`).send(newEvent).expect(201);
 
       expect(response.body.status).toBe(201);
     });
@@ -38,11 +35,7 @@ describe("Event Controller", () => {
         user_id: "2bc486a6-dc5a-4608-a3ad-84575e0da497",
       };
 
-      const response = await supertest(app)
-        .put(`/api/events/${eventId}`)
-        .set("Authorization", `eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6Ijc4NGNiOTcyLTczNGQtNDQ2MS05ZDE1LTM0ZGRhYzhjNGE2ZCIsImlhdCI6MTcwNDk3MTE1MSwiZXhwIjoxNzA0OTgxOTUxfQ.8skb-xF4cZutqJHzrjNx0DYCnFs7qeUZ-XaZBqxZO8c`)
-        .send(updatedEvent)
-        .expect(200);
+      const response = await supertest(app).put(`/api/events/${eventId}`).set("Authorization", `${token}`).send(updatedEvent).expect(200);
 
       expect(response.body.status).toBe(200);
       expect(response.body.message).toBe("Event updated successfully");
@@ -58,11 +51,7 @@ describe("Event Controller", () => {
         user_id: "123456",
       };
 
-      const response = await supertest(app)
-        .put(`/api/events/${nonExistingEventId}`)
-        .set("Authorization", `eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6Ijc4NGNiOTcyLTczNGQtNDQ2MS05ZDE1LTM0ZGRhYzhjNGE2ZCIsImlhdCI6MTcwNDk3MTE1MSwiZXhwIjoxNzA0OTgxOTUxfQ.8skb-xF4cZutqJHzrjNx0DYCnFs7qeUZ-XaZBqxZO8c`)
-        .send(updatedEvent)
-        .expect(404);
+      const response = await supertest(app).put(`/api/events/${nonExistingEventId}`).set("Authorization", `${token}`).send(updatedEvent).expect(404);
 
       expect(response.body.status).toBe(404);
       expect(response.body.message).toBe("Event not found");

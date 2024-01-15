@@ -3,20 +3,20 @@ import server from "../../lib/testServer";
 
 const app = server();
 
-// describe("POST User Authentication (/auth)", () => {
-//   describe("Creating  User Account (/signup)", () => {
-//     // change email if want to run again
-//     it("should return 201", async () => {
-//       const account = {
-//         name: "Jest Test Account",
-//         email: "jesttest6@gmail.com",
-//         password: "jest123",
-//       };
+describe("POST User Authentication (/auth)", () => {
+  describe("Creating  User Account (/signup)", () => {
+    // change email if want to run again
+    it("should return 201", async () => {
+      const account = {
+        name: "Jest Test Account",
+        email: "jesttest9@gmail.com",
+        password: "jest123",
+      };
 
-//       await supertest(app).post("/auth/signup").send(account).expect(201);
-//     });
-//   });
-// });
+      await supertest(app).post("/auth/signup").send(account).expect(201);
+    });
+  });
+});
 
 describe("Creating User Account with Exist Email (/signup)", () => {
   it("should return 400", async () => {

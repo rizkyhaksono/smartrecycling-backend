@@ -1,8 +1,8 @@
 import supertest from "supertest";
 import testServer from "../../lib/testServer";
+import { token } from "../db";
 
 const app = testServer();
-const token = "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6Ijc4NGNiOTcyLTczNGQtNDQ2MS05ZDE1LTM0ZGRhYzhjNGE2ZCIsImlhdCI6MTcwNDk3Nzk4MiwiZXhwIjoxNzA0OTg4NzgyfQ.IEVHWn8_izVzN6vYiw_uVhQ6B94Q3R7qGFpqe-r0Nuc";
 
 describe("Report Controller", () => {
   describe("Get Report", () => {
