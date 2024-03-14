@@ -52,13 +52,7 @@ console.log(selectedEnvironment)
 
 async function connectToDatabase() {
   try {
-    const connection = await mysql.createConnection({
-      host: "localhost",
-      port: 3306,
-      user: "root",
-      password: "root",
-      database: "smartrecycling",
-    })
+    const connection = await mysql.createConnection({})
     console.log("Connected to database successfully!")
     return connection
   } catch (error) {
