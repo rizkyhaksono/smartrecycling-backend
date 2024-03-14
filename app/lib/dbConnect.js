@@ -50,10 +50,14 @@ const NODE_ENV = "testing"
 const selectedEnvironment = environments[NODE_ENV]
 console.log(selectedEnvironment)
 
-async function dbPool() {
+async function connectToDatabase() {
   try {
     const connection = await mysql.createConnection({
-      
+      host: "localhost",
+      port: 3306,
+      user: "root",
+      password: "root",
+      database: "smartrecycling",
     })
     console.log("Connected to database successfully!")
     return connection
@@ -63,4 +67,4 @@ async function dbPool() {
   }
 }
 
-export default dbPool
+export default connectToDatabase

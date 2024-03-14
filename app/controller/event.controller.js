@@ -1,5 +1,7 @@
-import dbPool from "../lib/dbConnect.js"
+import connectToDatabase from "../lib/dbConnect.js"
 import { verifyToken } from "../lib/tokenHandler.js"
+
+const dbPool = await connectToDatabase()
 
 export const getEvent = async (req, res, next) => {
   try {
