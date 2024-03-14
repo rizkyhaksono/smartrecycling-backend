@@ -3,6 +3,4 @@
 # dependencies
 /node_modules
 .env
-.env.test
-.env.example
 app/lib/dbConnect.js
